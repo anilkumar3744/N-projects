@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="46994f4d-72bc-47f7-bf8e-1a0f6695286a" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="VFS_Masterspages.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\CSS\VFSCss.css" />
+    <TemplateFile Location="Layouts\VFS_Masterspages\Competency Description.aspx" />
+    <TemplateFile Location="Layouts\VFS_Masterspages\Competency.aspx" />
+    <TemplateFile Location="Layouts\VFS_Masterspages\Goal_Catagory.aspx" />
+  </TemplateFiles>
+</Solution>

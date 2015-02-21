@@ -1,0 +1,6 @@
+C:\Anil_WorkArea\VFS_Masterspages\bin\Debug\VFS_Masterspages.dll
+C:\Anil_WorkArea\VFS_Masterspages\bin\Debug\VFS_Masterspages.pdb
+C:\Anil_WorkArea\VFS_Masterspages\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Anil_WorkArea\VFS_Masterspages\obj\Debug\ResolveAssemblyReference.cache
+C:\Anil_WorkArea\VFS_Masterspages\obj\Debug\VFS_Masterspages.dll
+C:\Anil_WorkArea\VFS_Masterspages\obj\Debug\VFS_Masterspages.pdb
