@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="CustomJquery">
+    <File Path="CustomJquery\Sample.txt" Url="CustomJquery/Sample.txt" />
+  <File Path="CustomJquery\jquery.js" Url="SiteAssets/jquery.js" />
+</Module>
+</Elements>

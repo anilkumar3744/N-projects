@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <CustomAction Id="BlogSample.Script" ScriptSrc="~site/SiteAssets/customJs.js" Location="ScriptLink" Sequence="10030" />
+
+</Elements>
