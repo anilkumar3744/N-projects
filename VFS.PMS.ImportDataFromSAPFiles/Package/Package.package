@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="4db6fc9b-96b0-400f-9f8f-aede5a4dad0e" solutionId="4db6fc9b-96b0-400f-9f8f-aede5a4dad0e" resetWebServer="false" name="VFS.PMS.ImportDataFromSAPFiles" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="37e0fd1f-0472-48de-a124-0c07059e8d38" />
+    <featureReference itemId="f0a3873b-2967-410e-8795-fb546926de25" />
+  </features>
+</package>

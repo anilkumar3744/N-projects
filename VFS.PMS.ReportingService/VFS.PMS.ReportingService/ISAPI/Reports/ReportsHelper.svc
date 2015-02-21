@@ -1,0 +1,1 @@
+﻿<%@ServiceHost Service="VFS.PMS.ReportingService.ReportsHelperService, $SharePoint.Project.AssemblyFullName$"%>

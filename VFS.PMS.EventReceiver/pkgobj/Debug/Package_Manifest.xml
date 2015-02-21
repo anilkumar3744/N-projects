@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="090f6dba-46a1-4e74-8e4b-4e80417e03ec" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="VFS.PMS.EventReceiver.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="VFS.PMS.EventReceiver_EmployeeDataRecieverFeature\Feature.xml" />
+  </FeatureManifests>
+</Solution>

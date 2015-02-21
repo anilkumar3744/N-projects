@@ -1,0 +1,1 @@
+<%@ServiceHost Service="VFS.PMS.ReportingService.ReportsHelperService, VFS.PMS.ReportingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5b977163f18a24e9"%>

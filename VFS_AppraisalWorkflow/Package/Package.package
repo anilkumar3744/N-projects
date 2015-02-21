@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1d8663ec-a4b9-4a26-941b-cfe4a8346a21" solutionId="1d8663ec-a4b9-4a26-941b-cfe4a8346a21" resetWebServer="false" name="VFS_AppraisalWorkflow" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="72e29435-6794-4a80-8426-2179f381d129" />
+  </features>
+</package>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8FCAFEF-8ED2-4952-AE6C-881C613DB5DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VFS.PMS.EventReceiver</RootNamespace>
+    <AssemblyName>VFS.PMS.EventReceiver</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\VFS\VFS.PMS.ImportDataFromSAPFiles\VFS.PMS.ImportDataFromSAPFiles\References\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.SharePoint.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ef4330804b3c4129, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\VFS\VFS.PMS.ImportDataFromSAPFiles\VFS.PMS.ImportDataFromSAPFiles\References\Microsoft.Practices.SharePoint.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.SharePoint.Common.XmlSerializers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ef4330804b3c4129, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\VFS\VFS.PMS.ImportDataFromSAPFiles\VFS.PMS.ImportDataFromSAPFiles\References\Microsoft.Practices.SharePoint.Common.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Linq, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DisableAppraisalTaskEvents.cs" />
+    <Compile Include="EventReceiverOnEmployeeAdded\EventReceiverOnEmployeeAdded.cs" />
+    <Compile Include="EventReceiverOnEmployeeUpdated\EventReceiverOnEmployeeUpdated.cs" />
+    <Compile Include="Helpers\ConstValues.cs" />
+    <Compile Include="Helpers\CSVHelperClasses.cs" />
+    <Compile Include="Helpers\LogConfigurationHelper.cs" />
+    <Compile Include="LogHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VFSPMSEntities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EmployeeDataReciever\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{87df063a-ee75-45f7-9fb4-a30f295335c7}</SharePointProjectItemId>
+    </None>
+    <None Include="EmployeeDataReciever\Elements.xml" />
+    <Compile Include="EmployeeDataReciever\EmployeeDataReciever.cs">
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EventReceiverOnEmployeeAdded\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{59fd34a2-6517-4515-ade4-e0696af67879}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceiverOnEmployeeUpdated\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d6327f87-0f03-448d-9512-711a8b3e8401}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{090f6dba-46a1-4e74-8e4b-4e80417e03ec}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\EmployeeDataRecieverFeature\EmployeeDataRecieverFeature.feature">
+      <FeatureId>{60b94f09-969a-4115-b107-713a393f586f}</FeatureId>
+    </None>
+    <None Include="Features\EmployeeDataRecieverFeature\EmployeeDataRecieverFeature.Template.xml">
+      <DependentUpon>EmployeeDataRecieverFeature.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EventReceiverOnEmployeeAdded\Elements.xml" />
+    <Content Include="EventReceiverOnEmployeeUpdated\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="7faf0cd2-1637-4bc7-b057-f481fe64ff4f" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="VFS.PMS.ReportingService.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="ISAPI\Reports\Web.config" />
+    <RootFile Location="ISAPI\Reports\ReportsHelper.svc" />
+  </RootFiles>
+</Solution>

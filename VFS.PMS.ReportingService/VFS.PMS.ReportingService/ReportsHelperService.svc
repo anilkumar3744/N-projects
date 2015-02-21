@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="VFS.PMS.ReportingService.ReportsHelperService" CodeBehind="ReportsHelperService.svc.cs" %>

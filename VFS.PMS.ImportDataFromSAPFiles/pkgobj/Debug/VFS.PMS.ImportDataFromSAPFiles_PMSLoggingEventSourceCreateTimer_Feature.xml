@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="aad6ad79-04c0-4cfb-afa0-d438f276a501" ReceiverAssembly="VFS.PMS.ImportDataFromSAPFiles, Version=1.0.0.0, Culture=neutral, PublicKeyToken=00bbaffd9028d1fd" ReceiverClass="VFS.PMS.ImportDataFromSAPFiles.Features.PMSLoggingEventSourceCreateTimer.PMSLoggingEventSourceCreateTimerEventReceiver" Scope="Farm" Title="VFS.PMS.LoggingEventSourceCreateTimer"></Feature>

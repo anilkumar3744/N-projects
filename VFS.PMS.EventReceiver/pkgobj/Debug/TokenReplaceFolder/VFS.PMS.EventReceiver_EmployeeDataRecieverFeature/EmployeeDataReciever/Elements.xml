@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListTemplateId="100">
+  <Receiver>
+<Name>EmployeeDataRecieverItemUpdating</Name>
+<Type>ItemUpdating</Type>
+<Assembly>VFS.PMS.EventReceiver, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a43216281ee9bacb</Assembly>
+<Class>VFS.PMS.EventReceiver.EmployeeDataReciever.EmployeeDataReciever</Class>
+<SequenceNumber>1000</SequenceNumber>
+</Receiver>
+</Receivers>
+</Elements>

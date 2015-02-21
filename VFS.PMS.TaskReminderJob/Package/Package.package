@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="03ccfefc-d8d8-4797-9a2a-00fbbc63f3d4" solutionId="03ccfefc-d8d8-4797-9a2a-00fbbc63f3d4" resetWebServer="false" name="VFS.PMS.TaskReminderJob" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="8daf1348-832d-4fa1-b238-ce7e23c63819" />
+  </features>
+</package>

@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="H1AppraiseeAppeal" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1-Appraisee Appeal"%
+Dear {2},&lt;br/&gt;&lt;br/&gt;             
+ {3} (Appraisee) has submitted an appeal requesting you to re-evaluate the Appraisal for the period H1, {4}. The current status of the appraisal is "H1-Appraisee Appeal".&lt;br/&gt;&lt;br/&gt;You can access  the link, &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;    
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AppraiseeAppeal1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1-Appraisee Appeal" %
+Dear {2}, &lt;br/&gt;{3} (Appraisee) submitted the appeal requesting you to re-evaluate the Appraisal for the period H1, {4}. The current status of the appraisal is "H1-Appraisee Appeal" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks &lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiseeGoalSetting" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - H1 - Awaiting Appraisee Goal Setting %
+Dear {2}, &lt;br/&gt;&lt;br/&gt;You are requested to set the goals for the period H1, {3}.The current status of the appraisal is "H1 - Awaiting Appraisee Goal Setting".    &lt;br/&gt; &lt;br/&gt;  You can access the appraisal using the link, &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+Regards,&lt;br/&gt;
+Team - HR &lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiseeGoalSetting1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - H1 - Awaiting Appraisee Goal Setting %
+Hello {2}, You are requested to set the goals for the period H1, {3}.The current status of the appraisal is "H1 - Awaiting Appraisee Goal Setting" and you can access the appraisal using the &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiseeSignoff" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Appraisee Sign-off" %
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} (Reviewer) has approved the evaluation of your appraisal for the period H1, {4} and awaiting your sign-off. The current status of the appraisal is "H1 - Awaiting Appraisee Sign-off".You can access the appraisal using the link,&lt;a href={5}&gt;{5} &lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiseeSignoff1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Appraisee Sign-off" %
+Hello {2}, {3} (Reviewer) approved the evaluation of your appraisal for the period H1, {4} and awaiting your sign-off. The current status of the appraisal is "H1 - Awaiting Appraisee Sign-off" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiserEvaluation" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Appraiser Evaluation" %
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} ({4}) (Appraisee) has submitted Appraisal self-evaluation for the period H1, {5} and awaiting your evaluation.The current status of the appraisal is "H1 - Awaiting Appraiser Evaluation".You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiserEvaluation1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Appraiser Evaluation" %
+Hello {2}, {3} ({4}) (Appraisee) submitted Appraisal self-evaluation for the period H1, {5} and awaiting your evaluation.The current status of the appraisal is "H1 - Awaiting Appraiser Evaluation" and you can access the appraisal using the &lt;a href={6}&gt;link, &lt;/a&gt;. &lt;/br&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiserGoalApproval" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - H1 Awaiting Appraiser Goal Approval %
+Dear {2}, &lt;br/&gt;&lt;br/&gt; {3}({4}) (Appraisee) submitted the goals - Appraisal for the period H1, {5} and awaiting your approval. The current status of the appraisal is "H1 Awaiting Appraiser Goal Approval". &lt;br/&gt;&lt;br/&gt;You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiserGoalApproval1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - H1 Awaiting Appraiser Goal Approval %
+Hello {2}, {3}({4}) (Appraisee) submitted the goals - Appraisal for the period H1, {5} and awaiting your approval. The current status of the appraisal is "H1 Awaiting Appraiser Goal Approval" and you can access the appraisal using the &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingAppraiserGoalApproval21" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Appraiser Goal Approval"%             Dear {2},&lt;br/&gt;&lt;br/&gt; {3} ({4}) (Appraisee) amended the goals - Appraisal for the period H1, {5} and awaiting your approval.The current status of the appraisal is "H1 - Awaiting Appraiser Goal Approval".&lt;br/&gt;&lt;br/&gt; You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingReviewerApproval" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Reviewer Approval" %
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3}  has submitted the evaluation for H1,{4} Appraisal of {5} ({6}) and awaiting your approval. The current status of the appraisal is "H1 - Awaiting Reviewer Approval".You can access the appraisal using the link, &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingReviewerApproval1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Reviewer Approval" %
+Hello {2}, {3} submitted the evaluation for H1,{4} Appraisal of {5} ({6}) and awaiting your approval. The current status of the appraisal is "H1 - Awaiting Reviewer Approval" and you can access the appraisal using  the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingReviewerApproval2" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Reviewer Approval" %
+Hello {2}, {3} submitted the re-evaluation for H1,{4} Appraisal of {5} ({6}) after appeal by appraisee and awaiting your approval. The current status of the appraisal is "H1 - Awaiting Reviewer Approval" and you can access the appraisal using  the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingReviewerApproval21" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Reviewer Approval" %
+Hello {2}, {3} submitted the re-evaluation for H1,{4} Appraisal of {5} ({6}) after appeal by appraisee and awaiting your approval. The current status of the appraisal is "H1 - Awaiting Reviewer Approval" and you can access the appraisal using  the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingReviewerApproval3" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Reviewer Approval"&gt;%
+Hello {2}, {3} submitted the re-evaluation for H1,{4} Appraisal of {5} ({6}) after review request by HR and awaiting your approval. The current status of the appraisal is "H1 - Awaiting Reviewer Approval" and you can access the appraisal using the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingReviewerApproval31" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Reviewer Approval"&gt;%
+Hello {2}, {3} submitted the re-evaluation for H1,{4} Appraisal of {5} ({6}) after review request by HR and awaiting your approval. The current status of the appraisal is "H1 - Awaiting Reviewer Approval" and you can access the appraisal using  the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingSelfevaluation1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Self-evaluation" %
+Dear {2},&lt;br/&gt;&lt;br/&gt;You are requested to complete self-evaluation of your appraisal for the period H1, {3}.The current status of the appraisal is "H1 - Awaiting Self-evaluation".You can access the appraisal using the link, &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingSelfevaluation11" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Self-evaluation" %
+Hello {2}, You are requested to complete self-evaluation of your appraisal for the period H1, {3}.The current status of the appraisal is "H1 - Awaiting Self-evaluation" and you can access the appraisal using  the &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1AwaitingSelfevaluation2" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Self-evaluation" %
+Hello {2}, You are requested to complete self-evaluation of your appraisal for the period H1, {3}.The current status of the appraisal is &lt;Current Status&gt; and you can access the appraisal using  the &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email."</value>
+  </data>
+  <data name="H1AwaitingSelfevaluation21" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Awaiting Self-evaluation" %
+Hello {2}, You are requested to complete self-evaluation of your appraisal for the period H1, {3}.The current status of the appraisal is &lt;Current Status&gt; and you can access the appraisal using the &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email."</value>
+  </data>
+  <data name="H1Completed" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1-Completed" %
+Dear {2},&lt;br/&gt;&lt;br/&gt; Your Appraisal for the period H1, {3} is complete and awaiting you to set the goals for H2, {4}. The current status of the appraisal is "H1-Completed".You can access the appraisal using  the link, &lt;a href={5}&gt;{5}&gt;&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1Completed1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1-Completed" %
+Hello {2}, Your Appraisal for the period H1, {3} is complete and awaiting you to set the goals for H2, {4}. The current status of the appraisal is "H1-Completed" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1GoalsApproved" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Goals Approved"%
+Dear {2}, &lt;br/&gt;&lt;br/&gt; {3} (Appraiser) approved Goals of your appraisal for the period H1, {4} by {5}. The current status of the appraisal is "H1 - Goals Approved". &lt;br/&gt;&lt;br/&gt; You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1GoalsApproved1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Goals Approved"%
+Hello {2}, {3} (Appraiser) approved Goals of your appraisal for the period H1, {4} by {5}. The current status of the appraisal is "H1 - Goals Approved" and you can access the appraisal using the &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1HRReview" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - HR Review" %
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} (HR) requests you to re-evaluate the Appraisal of &lt;Appraisee Name&gt; for the period H1, {4}. The current status of the appraisal is "H1 - HR Review".You can access the appraisal using the link, &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1HRReview1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - HR Review" %
+Hello {2}, {3} (HR) requests you to re-evaluate the Appraisal of &lt;Appraisee Name&gt; for the period H1, {4}. The current status of the appraisal is "H1 - HR Review" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1HRSignOff" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 Sign Off of by Appraisee" 
+
+
+%  Dear {2},&lt;br/&gt;&lt;br/&gt;  Your Appraisal  for the period H1, {3}has been  Signed Off by your HR Business Partner {4} on behalf of you.The current status of the appraisal is "H1 - Sign-off by Appraisee".&lt;br/&gt;&lt;br/&gt; You can view the appraisal using the link, &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1SignoffbyAppraisee" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Sign-off by Appraisee"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; Appraisal of {3} for the period H1, {4} is awaiting your decision.The current status of the appraisal is "H1 - Sign-off by Appraisee".You can access the appraisal using  the link, &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1SignoffbyAppraisee1" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Sign-off by Appraisee"%
+Hello {2}, Appraisal of {3} for the period H1, {4} is awaiting your decision.The current status of the appraisal is "H1 - Sign-off by Appraisee" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H1SignoffbyAppraisee2" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Sign-off by Appraisee" %
+Hello {2}, {3} prescribed Performance Improvement Plan (PIP) based on your performance during the period H1, {4}. The current status of the appraisal is "H1 - Sign-off by Appraisee" and you can access the appraisal using  the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email."</value>
+  </data>
+  <data name="H1SignoffbyAppraisee21" xml:space="preserve">
+    <value>H1, {0} Appraisal - {1} - "H1 - Sign-off by Appraisee" %
+Hello {2}, {3} prescribed Performance Improvement Plan (PIP) based on your performance during the period H1, {4}. The current status of the appraisal is "H1 - Sign-off by Appraisee" and you can access the appraisal usingthe &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email."</value>
+  </data>
+  <data name="H2AppraiseeAppeal" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2-Appraisee Appeal"%
+Dear {2},&lt;br/&gt;&lt;br/&gt;             
+ {3} (Appraisee) has submitted an appeal requesting you to re-evaluate the Appraisal for the period H2, {4}. The current status of the appraisal is "H2-Appraisee Appeal".&lt;br/&gt;&lt;br/&gt;You can access  the link, &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;    
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AppraiseeAppeal1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2-Appraisee Appeal"%
+Hello {2}, Appraisal of {3} for the period H2, {4} is awaiting your decision.The current status of the appraisal is "H2-Appraisee Appeal" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiseeGoalSetting" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraisee Goal Setting"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; You are requested to set the goals for the period H2, {3}.The current status of the appraisal is "H2 - Awaiting Appraisee Goal Setting".You can access the appraisal using the link,&lt;a href={4}&gt;&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiseeGoalSetting1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraisee Goal Setting"%
+Hello {2}, You are requested to set the goals for the period H2, {3}.The current status of the appraisal is "H2 - Awaiting Appraisee Goal Setting" and you can access the appraisal using the &lt;a href={4}&gt;link, &lt;/a&gt;.&lt;/br&gt;
+
+Thanks&lt;/br&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiseeSignoff" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - H2 - Awaiting Appraisee Sign-off %
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} (Reviewer) approved the evaluation of your appraisal for the period H2, {4} and awaiting your sign-off. The current status of the appraisal is "H2 - Awaiting Appraisee Sign-off".You can access the appraisal using the link,&lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiseeSignoff1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - H2 - Awaiting Appraisee Sign-off %
+Hello {2}, {3} (Reviewer) approved the evaluation of your appraisal for the period H2, {4} and awaiting your sign-off. The current status of the appraisal is "H2 - Awaiting Appraisee Sign-off" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiserEvaluation" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraiser Evaluation"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} ({4}) (Appraisee) has submitted Appraisal self-evaluation for the period H2, {5} and awaiting your evaluation.The current status of the appraisal is "H2 - Awaiting Appraiser Evaluation".You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiserEvaluation1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraiser Evaluation"%
+Hello {2}, {3} ({4}) (Appraisee) submitted Appraisal self-evaluation for the period H2, {5} and awaiting your evaluation.The current status of the appraisal is "H2 - Awaiting Appraiser Evaluation" and you can access the appraisal using the &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiserGoalApproval" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraiser Goal Approval"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} ({4}) (Appraisee) has submitted the goals - Appraisal for the period H2, {5} and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Appraiser Goal Approval".You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiserGoalApproval1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraiser Goal Approval"%
+Hello {2}, {3} ({4}) (Appraisee) submitted the goals - Appraisal for the period H2, {5} and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Appraiser Goal Approval" and you can access the appraisal using the &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiserGoalApproval2" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraiser Goal Approval"%
+Hello {2}, {3} ({4}) (Appraisee) amended the goals - Appraisal for the period H2, {5} and awaiting your approval.The current status of the appraisal is "H2 - Awaiting Appraiser Goal Approval" and you can access the appraisal using the the &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingAppraiserGoalApproval21" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Appraiser Goal Approval"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} ({4}) (Appraisee) amended the goals - Appraisal for the period H2, {5} and awaiting your approval.The current status of the appraisal is "H2 - Awaiting Appraiser Goal Approval".&lt;br/&gt;&lt;br/&gt; You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingReviewerApproval" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1}- H2 - Awaiting Reviewer Approval%
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} has submitted the evaluation for H2,{4} Appraisal of {5} ({6}) and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Reviewer Approval".You can access the appraisal using the link, &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingReviewerApproval1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1}- H2 - Awaiting Reviewer Approval%
+Hello {2}, {3} submitted the evaluation for H2,{4} Appraisal of {5} ({6}) and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Reviewer Approval" and you can access the appraisal using the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingReviewerApproval2" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Reviewer Approval"%
+Hello {2}, {3} submitted the re-evaluation for H2,{4} Appraisal of {5} ({6}) after appeal by appraisee and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Reviewer Approval" and you can access the appraisal using the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingReviewerApproval21" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Reviewer Approval"%
+Hello {2}, {3} submitted the re-evaluation for H2,{4} Appraisal of {5} ({6}) after appeal by appraisee and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Reviewer Approval" and you can access the appraisal using the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingReviewerApproval3" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Reviewer Approval"%
+Hello {2}, {3} submitted the re-evaluation for H2,{4} Appraisal of {5} ({6}) after review request by HR and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Reviewer Approval" and you can access the appraisal using the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingReviewerApproval31" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Reviewer Approval"%
+Hello {2}, {3} submitted the re-evaluation for H2,{4} Appraisal of {5} ({6}) after review request by HR and awaiting your approval. The current status of the appraisal is "H2 - Awaiting Reviewer Approval" and you can access the appraisal using the &lt;a href={7}&gt;{7}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingSelfevaluation" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Self-evaluation"%
+Dear  {2},&lt;br/&gt;&lt;br/&gt; You are requested to complete self-evaluation of your appraisal for the period H2, {3}.The current status of the appraisal is "H2 - Awaiting Self-evaluation".You can access the appraisal using the &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2AwaitingSelfevaluation1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Awaiting Self-evaluation"%
+Hello {2}, You are requested to complete self-evaluation of your appraisal for the period H2, {3}.The current status of the appraisal is "H2 - Awaiting Self-evaluation" and you can access the appraisal using the &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2Completed" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - H2-Completed%
+Dear {2},&lt;br/&gt;&lt;br/&gt; Your Appraisal for the period H2, {3} is complete. The current status of the appraisal is "H2-Completed".You can access the appraisal using the link, &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2Completed1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - H2-Completed%
+Hello {2}, Your Appraisal for the period H2, {3} is complete. The current status of the appraisal is "H2-Completed" and you can access the appraisal using the &lt;a href={4}&gt;{4}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2GoalsApproved" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Goals Approved"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} (Appraiser) has approved Goals of your appraisal for the period H2, {4} by {5}. The current status of the appraisal is "H2 - Goals Approved".You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2GoalsApproved1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Goals Approved"%
+Hello {2}, {3} (Appraiser) approved Goals of your appraisal for the period H2, {4} by {5}. The current status of the appraisal is "H2 - Goals Approved" and you can access the appraisal using the &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2GoalsApproved2" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Goals Approved"%
+Hello {2}, {3} (Appraiser) amended the goals of your appraisal for the period H2, {4}. The current status of the appraisal is "H2 - Goals Approved" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2GoalsApproved21" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Goals Approved"%
+Hello {2}, {3} (Appraiser) amended the goals of your appraisal for the period H2, {4}. The current status of the appraisal is "H2 - Goals Approved" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2HRReview" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1}- "H2-HR Review"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; {3} (HR) requests you to re-evaluate the Appraisal of {4} for the period H2, {5}. The current status of the appraisal is "H2-HR Review".You can access the appraisal using the link, &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2HRReview1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1}- "H2-HR ReviewH2-HR Review"%
+Hello {2}, {3} (HR) requests you to re-evaluate the Appraisal of {4} for the period H2, {5}. The current status of the appraisal is "H2-HR ReviewH2-HR Review" and you can access the appraisal using the &lt;a href={6}&gt;{6}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2HRSignOff" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 Sign Off of by Appraisee" 
+
+
+%  Dear {2},&lt;br/&gt;&lt;br/&gt;  Your Appraisal  for the period H2, {3}has been  Signed Off by your HR Business Partner {4} on behalf of you.The current status of the appraisal is "H2 - Sign-off by Appraisee".&lt;br/&gt;&lt;br/&gt; You can view the appraisal using the link, &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2SignoffbyAppraisee" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Sign-off by Appraisee"%
+Dear {2},&lt;br/&gt;&lt;br/&gt; Appraisal of {3} for the period H2, {4} is awaiting your decision.The current status of the appraisal is "H2 - Sign-off by Appraisee".You can access the appraisal using the link, &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+
+Regards,&lt;br/&gt;
+Team - HR&lt;br/&gt;&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2SignoffbyAppraisee1" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Sign-off by Appraisee"%
+Hello {2}, Appraisal of {3} for the period H2, {4} is awaiting your decision.The current status of the appraisal is "H2 - Sign-off by Appraisee" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2SignoffbyAppraisee2" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Sign-off by Appraisee"%
+Hello {2}, {3} prescribed Performance Improvement Plan (PIP) based on your performance during the period H2, {4}. The current status of the appraisal is "H2 - Sign-off by Appraisee" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+  <data name="H2SignoffbyAppraisee21" xml:space="preserve">
+    <value>H2, {0} Appraisal - {1} - "H2 - Sign-off by Appraisee"%
+Hello {2}, {3} prescribed Performance Improvement Plan (PIP) based on your performance during the period H2, {4}. The current status of the appraisal is "H2 - Sign-off by Appraisee" and you can access the appraisal using the &lt;a href={5}&gt;{5}&lt;/a&gt;.&lt;br/&gt;
+
+Thanks&lt;br/&gt;
+
+Disclaimer: This is system generated email. Please do not reply to this email.</value>
+  </data>
+</root>

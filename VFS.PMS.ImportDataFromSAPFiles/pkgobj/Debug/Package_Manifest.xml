@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="4db6fc9b-96b0-400f-9f8f-aede5a4dad0e" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="VFS.PMS.ImportDataFromSAPFiles.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="VFS.PMS.ImportDataFromSAPFiles_VFS.PMS.ImportDataFromSAPFilesFeature\Feature.xml" />
+    <FeatureManifest Location="VFS.PMS.ImportDataFromSAPFiles_PMSLoggingEventSourceCreateTimer\Feature.xml" />
+  </FeatureManifests>
+</Solution>

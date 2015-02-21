@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="1d8663ec-a4b9-4a26-941b-cfe4a8346a21" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="VFS_AppraisalWorkflow.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="VFS_AppraisalWorkflow_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

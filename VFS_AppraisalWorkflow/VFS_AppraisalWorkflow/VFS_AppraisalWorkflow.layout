@@ -1,0 +1,972 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Size="1228| 2115" AutoSizeMargin="16| 24" AutoSize="False" Location="30| 30" Name="VFS_AppraisalWorkflow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Size="204| 80" AutoSizeMargin="16| 24" Location="62| 69" Name="VFS_AppraisalWorkflowInitialState">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="edInitiation" Size="381| 435" Location="70| 100">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onWorkflowActivated1" Size="130| 41" Location="195| 162" />
+						<CodeDesigner Name="caCheckH1orH2" Size="130| 41" Location="195| 222" />
+						<IfElseDesigner Name="ifElseH2Started" Size="361| 234" Location="80| 282">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2Started" Size="150| 134" Location="99| 353">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setStateToH2GoalSetting" Size="130| 53" Location="109| 415" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifH2NotStarted" Size="150| 134" Location="272| 353">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setStateToAppraiseeGoalSetting" Size="130| 53" Location="282| 415" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="221| 94" AutoSizeMargin="16| 24" Location="62| 165" Name="AppraiserGoalVerification">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="AppraiserVerificationStateInitiation" Size="150| 182" Location="70| 196">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForAppraiserGoalVerification" Size="130| 41" Location="80| 258" />
+						<ActivityDesigner Name="logToHistory1" Size="130| 41" Location="80| 318" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edAppraiserVerification" Size="612| 676" Location="70| 220">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForAppraiserGoalVerification" Size="130| 41" Location="311| 282" />
+						<IfElseDesigner Name="ifElseH1AppraiserDeactivation" Size="592| 535" Location="80| 342">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH1AppraiserDeactivation" Size="150| 435" Location="99| 413">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity43" Size="130| 41" Location="109| 475" />
+										<SetStateDesigner Name="setStateActivity6" Size="130| 41" Location="109| 535" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity3" Size="381| 435" Location="272| 413">
+									<IfElseBranchDesigner.Designers>
+										<CodeDesigner Name="caForTMTInitiation" Size="130| 41" Location="397| 475" />
+										<IfElseDesigner Name="ifElseTMTInitiation" Size="361| 294" Location="282| 535">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="ifElseTMTInitiationStarted" Size="150| 194" Location="301| 606">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity1" Size="130| 41" Location="311| 668" />
+														<SetStateDesigner Name="setStateToSelfEvaluation" Size="130| 53" Location="311| 728" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="ifElseTMTInitiationNotStarted" Size="150| 194" Location="474| 606">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity2" Size="130| 41" Location="484| 668" />
+														<SetStateDesigner Name="setStateToH1GoalChanges" Size="130| 53" Location="484| 728" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160| 94" AutoSizeMargin="16| 24" Location="62| 275" Name="SelfEvaluation">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniSelfEvaluation" Size="150| 182" Location="70| 306">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForSelfEvaluation" Size="130| 41" Location="80| 368" />
+						<ActivityDesigner Name="logToHistoryListActivity3" Size="130| 41" Location="80| 428" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edSelfEvaluation" Size="381| 435" Location="70| 330">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedSelfEvaluation" Size="130| 41" Location="195| 392" />
+						<IfElseDesigner Name="ifElseH1SelfDeactivation" Size="361| 294" Location="80| 452">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH1SelfDeactivation" Size="150| 194" Location="99| 523">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity44" Size="130| 41" Location="109| 585" />
+										<SetStateDesigner Name="setStateActivity7" Size="130| 41" Location="109| 645" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity2" Size="150| 194" Location="272| 523">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity4" Size="130| 41" Location="282| 585" />
+										<SetStateDesigner Name="setStateToAppraiserEvaluation" Size="130| 53" Location="282| 645" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="185| 94" AutoSizeMargin="16| 24" Location="62| 385" Name="AppraiserEvaluation">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniAppraiserEvaluation" Size="150| 182" Location="70| 416">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForAppraiserEvaluation" Size="130| 41" Location="80| 478" />
+						<ActivityDesigner Name="logToHistoryListActivity5" Size="130| 41" Location="80| 538" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edAppraiserEvaluation" Size="381| 435" Location="70| 440">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForAppraiserEvaluation" Size="130| 41" Location="195| 502" />
+						<IfElseDesigner Name="ifH1AppraiserEvalDeactivation" Size="361| 294" Location="80| 562">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH1AppraiserEvalDeactivated" Size="150| 194" Location="99| 633">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity46" Size="130| 41" Location="109| 695" />
+										<SetStateDesigner Name="setStateActivity9" Size="130| 41" Location="109| 755" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity5" Size="150| 194" Location="272| 633">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity6" Size="130| 41" Location="282| 695" />
+										<SetStateDesigner Name="setStateToReviewerVerification" Size="130| 53" Location="282| 755" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="187| 94" AutoSizeMargin="16| 24" Location="62| 495" Name="ReviewerVerification">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniReviewerVerification" Size="150| 182" Location="70| 526">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForReviewerVerification" Size="130| 41" Location="80| 588" />
+						<ActivityDesigner Name="logToHistoryListActivity7" Size="130| 41" Location="80| 648" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edReviewerVerification" Size="381| 435" Location="70| 550">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedReviewerVerification" Size="130| 41" Location="195| 612" />
+						<IfElseDesigner Name="ifElseH1RvrEvalDeactiovation" Size="361| 294" Location="80| 672">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifRvrEvalDeactivation" Size="150| 194" Location="99| 743">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity47" Size="130| 41" Location="109| 805" />
+										<SetStateDesigner Name="setStateActivity10" Size="130| 53" Location="109| 865" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity6" Size="150| 194" Location="272| 743">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity8" Size="130| 41" Location="282| 805" />
+										<SetStateDesigner Name="setStateToAppraiseeSignOff" Size="130| 53" Location="282| 865" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160| 94" AutoSizeMargin="16| 24" Location="62| 605" Name="HR">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniHR" Size="150| 182" Location="70| 636">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForCountryHR" Size="130| 41" Location="80| 698" />
+						<ActivityDesigner Name="logToHistoryListActivity12" Size="130| 41" Location="80| 758" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edHR" Size="612| 616" Location="70| 660">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForCountryHR" Size="130| 41" Location="311| 722" />
+						<IfElseDesigner Name="ifElseH1HRDeactivation" Size="592| 475" Location="80| 782">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH1HRDeactivation" Size="150| 375" Location="99| 853">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity49" Size="130| 41" Location="109| 915" />
+										<SetStateDesigner Name="setStateActivity12" Size="130| 53" Location="109| 975" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity8" Size="381| 375" Location="272| 853">
+									<IfElseBranchDesigner.Designers>
+										<IfElseDesigner Name="ifElseCountryHR" Size="361| 294" Location="282| 915">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="isCountryHRClose" Size="150| 194" Location="301| 986">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity13" Size="130| 41" Location="311| 1048" />
+														<SetStateDesigner Name="setStateToH2InitialGoalSetting" Size="130| 53" Location="311| 1108" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="isCountryHRRequest" Size="150| 194" Location="474| 986">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity14" Size="130| 41" Location="484| 1048" />
+														<SetStateDesigner Name="setStateToAppraiserRevaluationHR" Size="130| 53" Location="484| 1108" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160| 80" AutoSizeMargin="16| 24" Location="62| 715" Name="ClosedState" />
+		<StateDesigner Size="171| 94" AutoSizeMargin="16| 24" Location="62| 811" Name="AppraiseeSignOffOrAppeal">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniAppraiseeSignOff" Size="150| 182" Location="70| 842">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForAppraiseeSignOff" Size="130| 41" Location="80| 904" />
+						<ActivityDesigner Name="logToHistoryListActivity9" Size="130| 41" Location="80| 964" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edAppraiseeSignOff" Size="612| 616" Location="70| 866">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForAppraiseeSignOff" Size="130| 41" Location="311| 928" />
+						<IfElseDesigner Name="ifElseH1AppraiseeSingOffDeactivation" Size="592| 475" Location="80| 988">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH1AppraiseeSignOffDeactivation" Size="150| 375" Location="99| 1059">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity48" Size="130| 41" Location="109| 1121" />
+										<SetStateDesigner Name="setStateActivity11" Size="130| 53" Location="109| 1181" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity7" Size="381| 375" Location="272| 1059">
+									<IfElseBranchDesigner.Designers>
+										<IfElseDesigner Name="ifElseAppraiseeAppeal" Size="361| 294" Location="282| 1121">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="isAppraiseeAppeal" Size="150| 194" Location="301| 1192">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity10" Size="130| 41" Location="311| 1254" />
+														<SetStateDesigner Name="setStateToAppraiserRevaluation" Size="130| 53" Location="311| 1314" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="isAppraiseeSignedOff" Size="150| 194" Location="474| 1192">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity11" Size="130| 41" Location="484| 1254" />
+														<SetStateDesigner Name="setStateToCountryHR" Size="130| 53" Location="484| 1314" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="182| 94" AutoSizeMargin="16| 24" AutoSize="False" Location="62| 921" Name="AppraiseeGoalSetting">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="AppraiseeInitialGoalSetting" Size="150| 182" Location="70| 952">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForInitialGoalSetting" Size="130| 41" Location="80| 1014" />
+						<ActivityDesigner Name="logToHistoryListActivity15" Size="130| 41" Location="80| 1074" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edAppraiseeGoalSetting" Size="381| 435" Location="70| 976">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedGoalSetting" Size="130| 41" Location="195| 1038" />
+						<IfElseDesigner Name="ifElseH1AppraiseeDeactivation" Size="361| 294" Location="80| 1098">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH1Deactivated" Size="150| 194" Location="99| 1169">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity41" Size="130| 41" Location="109| 1231" />
+										<SetStateDesigner Name="setStateToDeactivation1" Size="130| 53" Location="109| 1291" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifH1GoalSettingComplete" Size="150| 194" Location="272| 1169">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity16" Size="130| 41" Location="282| 1231" />
+										<SetStateDesigner Name="setSateToGoalVerification" Size="130| 53" Location="282| 1291" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="208| 94" AutoSizeMargin="16| 24" AutoSize="False" Location="62| 1031" Name="H2InitialGoalSetting">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="AppraiseeH2InitialGoalSetting" Size="150| 182" Location="70| 1062">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH2InitialGoalSetting" Size="130| 41" Location="80| 1124" />
+						<ActivityDesigner Name="logToHistoryListActivity17" Size="130| 41" Location="80| 1184" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edAppraiseeH2InitialGoalSetting" Size="381| 423" Location="70| 1086">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedH2GoalSetting" Size="130| 41" Location="195| 1148" />
+						<IfElseDesigner Name="ifElseH2GoalSetting" Size="361| 282" Location="80| 1208">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2GoalsCompleted" Size="150| 182" Location="99| 1279">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity18" Size="130| 41" Location="109| 1341" />
+										<SetStateDesigner Name="setStateActivity5" Size="130| 41" Location="109| 1401" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity9" Size="150| 182" Location="272| 1279">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity50" Size="130| 41" Location="282| 1341" />
+										<TerminateDesigner Name="terminateActivity1" Size="130| 41" Location="282| 1401" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="235| 94" AutoSizeMargin="16| 24" Location="62| 1141" Name="AppraiserH2GoalVerification">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="H2AppraiserVerificationStateInitiation" Size="150| 182" Location="70| 1172">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForAppraiserH2GoalVerification" Size="130| 41" Location="80| 1234" />
+						<ActivityDesigner Name="logToHistoryListActivity19" Size="130| 41" Location="80| 1294" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edAppraiserH2Verification" Size="612| 676" Location="70| 1196">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForAppraiserH2GoalVerification" Size="130| 41" Location="311| 1258" />
+						<IfElseDesigner Name="ifElseH2AppraiserDeactivation" Size="592| 535" Location="80| 1318">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2AppraiserDeactivation" Size="150| 435" Location="99| 1389">
+									<IfElseBranchDesigner.Designers>
+										<TerminateDesigner Name="terminateActivity2" Size="130| 41" Location="109| 1608" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity10" Size="381| 435" Location="272| 1389">
+									<IfElseBranchDesigner.Designers>
+										<CodeDesigner Name="caForH2TMTInitiation" Size="130| 41" Location="397| 1451" />
+										<IfElseDesigner Name="ifElseH2TMTInitiation" Size="361| 294" Location="282| 1511">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="ifElseH2TMTInitiationStarted" Size="150| 194" Location="301| 1582">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity20" Size="130| 41" Location="311| 1644" />
+														<SetStateDesigner Name="setStateToH2SelfEvaluation" Size="130| 53" Location="311| 1704" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="ifElseH2TMTInitiationNotStarted" Size="150| 194" Location="474| 1582">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity34" Size="130| 41" Location="484| 1644" />
+														<SetStateDesigner Name="setStateH2GoalSetting" Size="130| 53" Location="484| 1704" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="170| 94" AutoSizeMargin="16| 24" AutoSize="False" Location="62| 1251" Name="H2SelfEvaluation">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH2SelfEvaluation" Size="150| 182" Location="70| 1282">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH2SelfEvaluation" Size="130| 41" Location="80| 1344" />
+						<ActivityDesigner Name="logToHistoryListActivity21" Size="130| 41" Location="80| 1404" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH2SelfEvaluation" Size="381| 435" Location="70| 1306">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedH2SelfEvaluation" Size="130| 41" Location="195| 1368" />
+						<IfElseDesigner Name="ifElseH2SelfDeactivation" Size="361| 294" Location="80| 1428">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2SelfDeactivation" Size="150| 194" Location="99| 1499">
+									<IfElseBranchDesigner.Designers>
+										<TerminateDesigner Name="terminateActivity3" Size="130| 41" Location="109| 1597" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity11" Size="150| 194" Location="272| 1499">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity22" Size="130| 41" Location="282| 1561" />
+										<SetStateDesigner Name="setStateH2AppraiserEvaluation" Size="130| 53" Location="282| 1621" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="202| 94" AutoSizeMargin="16| 24" Location="62| 1361" Name="H2AppraiserEvaluation">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH2AppraiserVerification" Size="150| 182" Location="70| 1392">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH2AppraiserEvaluation" Size="130| 41" Location="80| 1454" />
+						<ActivityDesigner Name="logToHistoryListActivity23" Size="130| 41" Location="80| 1514" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH2AppraiserVerification" Size="381| 435" Location="70| 1416">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForH2AppraiserEvaluation" Size="130| 41" Location="195| 1478" />
+						<IfElseDesigner Name="ifElseH2AppraiserEvalDeactivation" Size="361| 294" Location="80| 1538">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifElseBranchActivity1" Size="150| 194" Location="99| 1609">
+									<IfElseBranchDesigner.Designers>
+										<TerminateDesigner Name="terminateActivity5" Size="130| 41" Location="109| 1707" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity13" Size="150| 194" Location="272| 1609">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity24" Size="130| 41" Location="282| 1671" />
+										<SetStateDesigner Name="setStateH2ReviewerVerification" Size="130| 53" Location="282| 1731" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="201| 94" AutoSizeMargin="16| 24" Location="62| 1471" Name="H2ReviewerVerification">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH2ReviewerVerification" Size="150| 182" Location="70| 1502">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH2ReviewerVerification" Size="130| 41" Location="80| 1564" />
+						<ActivityDesigner Name="logToHistoryListActivity25" Size="130| 41" Location="80| 1624" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH2ReviewerVerification" Size="381| 435" Location="70| 1526">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedH2ReviewerVerification" Size="130| 41" Location="195| 1588" />
+						<IfElseDesigner Name="ifElseH2RvrEvalDeactivation" Size="361| 294" Location="80| 1648">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2RvrDeactivation" Size="150| 194" Location="99| 1719">
+									<IfElseBranchDesigner.Designers>
+										<TerminateDesigner Name="terminateActivity6" Size="130| 41" Location="109| 1817" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity15" Size="150| 194" Location="272| 1719">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity26" Size="130| 41" Location="282| 1781" />
+										<SetStateDesigner Name="setStateToH2AppraiseeSignOffOrAppeal" Size="130| 53" Location="282| 1841" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="185| 94" AutoSizeMargin="16| 24" Location="62| 1581" Name="H2AppraiseeSignOffOrAppeal">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH2AppraiseeSignOff" Size="150| 182" Location="70| 1612">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH2AppraiseeSignOff" Size="130| 41" Location="80| 1674" />
+						<ActivityDesigner Name="logToHistoryListActivity27" Size="130| 41" Location="80| 1734" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH2AppraiseeSignOff" Size="612| 616" Location="70| 1636">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForH2AppraiseeSignOff" Size="130| 41" Location="311| 1698" />
+						<IfElseDesigner Name="ifElseH2AppraiseeSignOff" Size="592| 475" Location="80| 1758">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2SignOffDeactivation" Size="150| 375" Location="99| 1829">
+									<IfElseBranchDesigner.Designers>
+										<TerminateDesigner Name="terminateActivity7" Size="130| 41" Location="109| 2018" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity16" Size="381| 375" Location="272| 1829">
+									<IfElseBranchDesigner.Designers>
+										<IfElseDesigner Name="ifElseH2AppraiseeAppeal" Size="361| 294" Location="282| 1891">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="isH2AppraiseeAppeal" Size="150| 194" Location="301| 1962">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity28" Size="130| 41" Location="311| 2024" />
+														<SetStateDesigner Name="setStateToH2AppraiserEvaluation" Size="130| 53" Location="311| 2084" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="isH2AppraiseeSignedOff" Size="150| 194" Location="474| 1962">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity29" Size="130| 41" Location="484| 2024" />
+														<SetStateDesigner Name="setStateH2HR" Size="130| 41" Location="484| 2084" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160| 94" AutoSizeMargin="16| 24" Location="62| 1691" Name="H2HR">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH2HR" Size="150| 182" Location="70| 1722">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH2CountryHR" Size="130| 41" Location="80| 1784" />
+						<ActivityDesigner Name="logToHistoryListActivity30" Size="130| 41" Location="80| 1844" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH2HR" Size="612| 616" Location="70| 1746">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedForH2CountryHR" Size="130| 41" Location="311| 1808" />
+						<IfElseDesigner Name="ifElseH2HRDeactivation" Size="592| 475" Location="80| 1868">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2HRDeactivation" Size="150| 375" Location="99| 1939">
+									<IfElseBranchDesigner.Designers>
+										<TerminateDesigner Name="terminateActivity8" Size="130| 41" Location="109| 2128" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity17" Size="381| 375" Location="272| 1939">
+									<IfElseBranchDesigner.Designers>
+										<IfElseDesigner Name="ifElseH2CountryHR" Size="361| 294" Location="282| 2001">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="isH2CountryHRClose" Size="150| 194" Location="301| 2072">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity31" Size="130| 41" Location="311| 2134" />
+														<SetStateDesigner Name="setStateToClosedState" Size="130| 53" Location="311| 2194" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="isH2CountryHRRequest" Size="150| 194" Location="474| 2072">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity32" Size="130| 41" Location="484| 2134" />
+														<SetStateDesigner Name="setStateToH2AppraiserRevaluationHR" Size="130| 53" Location="484| 2194" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160| 94" AutoSizeMargin="16| 24" Location="62| 1801" Name="H1EmptyState">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH1Empty" Size="150| 182" Location="70| 1832">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH1Empty" Size="130| 41" Location="80| 1894" />
+						<ActivityDesigner Name="logToHistoryListActivity36" Size="130| 41" Location="80| 1954" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH1Empty" Size="612| 604" Location="70| 1856">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onH1EmptyTaskChanged" Size="130| 41" Location="311| 1918" />
+						<IfElseDesigner Name="ifElseH1Empty" Size="592| 463" Location="80| 1978">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH1EmptyDeactivation" Size="150| 363" Location="99| 2049">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity45" Size="130| 41" Location="109| 2111" />
+										<SetStateDesigner Name="setStateActivity8" Size="130| 41" Location="109| 2171" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity4" Size="381| 363" Location="272| 2049">
+									<IfElseBranchDesigner.Designers>
+										<IfElseDesigner Name="ifH1Evaluation" Size="361| 282" Location="282| 2111">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="ifTMTTrigger" Size="150| 182" Location="301| 2182">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity37" Size="130| 41" Location="311| 2244" />
+														<SetStateDesigner Name="setStateActivity1" Size="130| 41" Location="311| 2304" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="ifGoalsAmendment" Size="150| 182" Location="474| 2182">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity38" Size="130| 41" Location="484| 2244" />
+														<SetStateDesigner Name="setStateActivity2" Size="130| 41" Location="484| 2304" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160| 94" AutoSizeMargin="16| 24" Location="62| 1911" Name="H2EmptyState">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH2Empty" Size="150| 182" Location="70| 1942">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForH2Empty" Size="130| 41" Location="80| 2004" />
+						<ActivityDesigner Name="logToHistoryListActivity33" Size="130| 41" Location="80| 2064" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH2Empty" Size="612| 604" Location="70| 1966">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onH2EmptyTaskChanged" Size="130| 41" Location="311| 2028" />
+						<IfElseDesigner Name="ifElseH2EmptyDeactivation" Size="592| 463" Location="80| 2088">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifH2EmpttyDeactivation" Size="150| 363" Location="99| 2159">
+									<IfElseBranchDesigner.Designers>
+										<TerminateDesigner Name="terminateActivity4" Size="130| 41" Location="109| 2342" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity12" Size="381| 363" Location="272| 2159">
+									<IfElseBranchDesigner.Designers>
+										<IfElseDesigner Name="ifH2Evaluation" Size="361| 282" Location="282| 2221">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="ifH2TMTTrigger" Size="150| 182" Location="301| 2292">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity39" Size="130| 41" Location="311| 2354" />
+														<SetStateDesigner Name="setStateActivity3" Size="130| 41" Location="311| 2414" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="ifH2GoalsAmendment" Size="150| 182" Location="474| 2292">
+													<IfElseBranchDesigner.Designers>
+														<ActivityDesigner Name="logToHistoryListActivity40" Size="130| 41" Location="484| 2354" />
+														<SetStateDesigner Name="setStateActivity4" Size="130| 41" Location="484| 2414" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="161| 94" AutoSizeMargin="16| 24" AutoSize="False" Location="62| 2021" Name="H1Deactivation">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateIniH1Deactivation" Size="150| 182" Location="569| 148">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTaskForDeactivation" Size="130| 41" Location="579| 210" />
+						<ActivityDesigner Name="logToHistoryListActivity35" Size="130| 41" Location="579| 270" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="edH1Deactivation" Size="150| 254" Location="561| 159">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChangedH1Deactivation" Size="130| 41" Location="571| 221" />
+						<ActivityDesigner Name="logToHistoryListActivity42" Size="130| 41" Location="571| 281" />
+						<SetStateDesigner Name="setStateToH2Start" Size="130| 53" Location="571| 341" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetActivity="H2InitialGoalSetting" SetStateName="setStateToH2GoalSetting" SourceActivity="VFS_AppraisalWorkflowInitialState" TargetConnectionIndex="0" SourceStateName="VFS_AppraisalWorkflowInitialState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edInitiation" SourceConnectionIndex="0" TargetStateName="H2InitialGoalSetting">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="163" Y="110" />
+				<ns0:Point X="291" Y="110" />
+				<ns0:Point X="291" Y="1022" />
+				<ns0:Point X="166" Y="1022" />
+				<ns0:Point X="166" Y="1031" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiseeGoalSetting" SetStateName="setStateToAppraiseeGoalSetting" SourceActivity="VFS_AppraisalWorkflowInitialState" TargetConnectionIndex="0" SourceStateName="VFS_AppraisalWorkflowInitialState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edInitiation" SourceConnectionIndex="0" TargetStateName="AppraiseeGoalSetting">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="163" Y="110" />
+				<ns0:Point X="275" Y="110" />
+				<ns0:Point X="275" Y="62" />
+				<ns0:Point X="51" Y="62" />
+				<ns0:Point X="51" Y="910" />
+				<ns0:Point X="153" Y="910" />
+				<ns0:Point X="153" Y="921" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateActivity6" SourceActivity="AppraiserGoalVerification" TargetConnectionIndex="0" SourceStateName="AppraiserGoalVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiserVerification" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="221" Y="230" />
+				<ns0:Point X="309" Y="230" />
+				<ns0:Point X="309" Y="2014" />
+				<ns0:Point X="142" Y="2014" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="SelfEvaluation" SetStateName="setStateToSelfEvaluation" SourceActivity="AppraiserGoalVerification" TargetConnectionIndex="0" SourceStateName="AppraiserGoalVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiserVerification" SourceConnectionIndex="1" TargetStateName="SelfEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="221" Y="230" />
+				<ns0:Point X="293" Y="230" />
+				<ns0:Point X="293" Y="270" />
+				<ns0:Point X="142" Y="270" />
+				<ns0:Point X="142" Y="275" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1EmptyState" SetStateName="setStateToH1GoalChanges" SourceActivity="AppraiserGoalVerification" TargetConnectionIndex="0" SourceStateName="AppraiserGoalVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiserVerification" SourceConnectionIndex="1" TargetStateName="H1EmptyState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="221" Y="230" />
+				<ns0:Point X="309" Y="230" />
+				<ns0:Point X="309" Y="1790" />
+				<ns0:Point X="142" Y="1790" />
+				<ns0:Point X="142" Y="1801" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateActivity7" SourceActivity="SelfEvaluation" TargetConnectionIndex="0" SourceStateName="SelfEvaluation" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edSelfEvaluation" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="189" Y="340" />
+				<ns0:Point X="309" Y="340" />
+				<ns0:Point X="309" Y="2014" />
+				<ns0:Point X="142" Y="2014" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiserEvaluation" SetStateName="setStateToAppraiserEvaluation" SourceActivity="SelfEvaluation" TargetConnectionIndex="0" SourceStateName="SelfEvaluation" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edSelfEvaluation" SourceConnectionIndex="1" TargetStateName="AppraiserEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="189" Y="340" />
+				<ns0:Point X="229" Y="340" />
+				<ns0:Point X="229" Y="374" />
+				<ns0:Point X="154" Y="374" />
+				<ns0:Point X="154" Y="385" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateActivity9" SourceActivity="AppraiserEvaluation" TargetConnectionIndex="0" SourceStateName="AppraiserEvaluation" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiserEvaluation" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="217" Y="450" />
+				<ns0:Point X="305" Y="450" />
+				<ns0:Point X="305" Y="2014" />
+				<ns0:Point X="142" Y="2014" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="ReviewerVerification" SetStateName="setStateToReviewerVerification" SourceActivity="AppraiserEvaluation" TargetConnectionIndex="0" SourceStateName="AppraiserEvaluation" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiserEvaluation" SourceConnectionIndex="1" TargetStateName="ReviewerVerification">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="217" Y="450" />
+				<ns0:Point X="257" Y="450" />
+				<ns0:Point X="257" Y="486" />
+				<ns0:Point X="155" Y="486" />
+				<ns0:Point X="155" Y="495" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateActivity10" SourceActivity="ReviewerVerification" TargetConnectionIndex="0" SourceStateName="ReviewerVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edReviewerVerification" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="220" Y="560" />
+				<ns0:Point X="308" Y="560" />
+				<ns0:Point X="308" Y="2014" />
+				<ns0:Point X="142" Y="2014" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiseeSignOffOrAppeal" SetStateName="setStateToAppraiseeSignOff" SourceActivity="ReviewerVerification" TargetConnectionIndex="0" SourceStateName="ReviewerVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edReviewerVerification" SourceConnectionIndex="1" TargetStateName="AppraiseeSignOffOrAppeal">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="220" Y="560" />
+				<ns0:Point X="260" Y="560" />
+				<ns0:Point X="260" Y="806" />
+				<ns0:Point X="147" Y="806" />
+				<ns0:Point X="147" Y="811" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateActivity12" SourceActivity="HR" TargetConnectionIndex="0" SourceStateName="HR" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edHR" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="133" Y="670" />
+				<ns0:Point X="309" Y="670" />
+				<ns0:Point X="309" Y="2014" />
+				<ns0:Point X="142" Y="2014" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2InitialGoalSetting" SetStateName="setStateToH2InitialGoalSetting" SourceActivity="HR" TargetConnectionIndex="0" SourceStateName="HR" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edHR" SourceConnectionIndex="1" TargetStateName="H2InitialGoalSetting">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="133" Y="670" />
+				<ns0:Point X="253" Y="670" />
+				<ns0:Point X="253" Y="1022" />
+				<ns0:Point X="166" Y="1022" />
+				<ns0:Point X="166" Y="1031" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiserEvaluation" SetStateName="setStateToAppraiserRevaluationHR" SourceActivity="HR" TargetConnectionIndex="0" SourceStateName="HR" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edHR" SourceConnectionIndex="1" TargetStateName="AppraiserEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="133" Y="670" />
+				<ns0:Point X="261" Y="670" />
+				<ns0:Point X="261" Y="374" />
+				<ns0:Point X="154" Y="374" />
+				<ns0:Point X="154" Y="385" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateActivity11" SourceActivity="AppraiseeSignOffOrAppeal" TargetConnectionIndex="0" SourceStateName="AppraiseeSignOffOrAppeal" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiseeSignOff" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="204" Y="876" />
+				<ns0:Point X="308" Y="876" />
+				<ns0:Point X="308" Y="2014" />
+				<ns0:Point X="142" Y="2014" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiserEvaluation" SetStateName="setStateToAppraiserRevaluation" SourceActivity="AppraiseeSignOffOrAppeal" TargetConnectionIndex="0" SourceStateName="AppraiseeSignOffOrAppeal" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiseeSignOff" SourceConnectionIndex="1" TargetStateName="AppraiserEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="204" Y="876" />
+				<ns0:Point X="260" Y="876" />
+				<ns0:Point X="260" Y="380" />
+				<ns0:Point X="154" Y="380" />
+				<ns0:Point X="154" Y="385" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="HR" SetStateName="setStateToCountryHR" SourceActivity="AppraiseeSignOffOrAppeal" TargetConnectionIndex="0" SourceStateName="AppraiseeSignOffOrAppeal" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiseeSignOff" SourceConnectionIndex="1" TargetStateName="HR">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="204" Y="876" />
+				<ns0:Point X="244" Y="876" />
+				<ns0:Point X="244" Y="598" />
+				<ns0:Point X="142" Y="598" />
+				<ns0:Point X="142" Y="605" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateToDeactivation1" SourceActivity="AppraiseeGoalSetting" TargetConnectionIndex="0" SourceStateName="AppraiseeGoalSetting" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiseeGoalSetting" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="225" Y="986" />
+				<ns0:Point X="305" Y="986" />
+				<ns0:Point X="305" Y="2014" />
+				<ns0:Point X="142" Y="2014" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiserGoalVerification" SetStateName="setSateToGoalVerification" SourceActivity="AppraiseeGoalSetting" TargetConnectionIndex="0" SourceStateName="AppraiseeGoalSetting" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiseeGoalSetting" SourceConnectionIndex="1" TargetStateName="AppraiserGoalVerification">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="225" Y="986" />
+				<ns0:Point X="289" Y="986" />
+				<ns0:Point X="289" Y="158" />
+				<ns0:Point X="172" Y="158" />
+				<ns0:Point X="172" Y="165" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiserH2GoalVerification" SetStateName="setStateActivity5" SourceActivity="H2InitialGoalSetting" TargetConnectionIndex="0" SourceStateName="H2InitialGoalSetting" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiseeH2InitialGoalSetting" SourceConnectionIndex="1" TargetStateName="AppraiserH2GoalVerification">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="266" Y="1096" />
+				<ns0:Point X="282" Y="1096" />
+				<ns0:Point X="282" Y="1134" />
+				<ns0:Point X="179" Y="1134" />
+				<ns0:Point X="179" Y="1141" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2SelfEvaluation" SetStateName="setStateToH2SelfEvaluation" SourceActivity="AppraiserH2GoalVerification" TargetConnectionIndex="0" SourceStateName="AppraiserH2GoalVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiserH2Verification" SourceConnectionIndex="1" TargetStateName="H2SelfEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="235" Y="1206" />
+				<ns0:Point X="307" Y="1206" />
+				<ns0:Point X="307" Y="1246" />
+				<ns0:Point X="147" Y="1246" />
+				<ns0:Point X="147" Y="1251" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2EmptyState" SetStateName="setStateH2GoalSetting" SourceActivity="AppraiserH2GoalVerification" TargetConnectionIndex="0" SourceStateName="AppraiserH2GoalVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edAppraiserH2Verification" SourceConnectionIndex="1" TargetStateName="H2EmptyState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="235" Y="1206" />
+				<ns0:Point X="307" Y="1206" />
+				<ns0:Point X="307" Y="1902" />
+				<ns0:Point X="142" Y="1902" />
+				<ns0:Point X="142" Y="1911" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2AppraiserEvaluation" SetStateName="setStateH2AppraiserEvaluation" SourceActivity="H2SelfEvaluation" TargetConnectionIndex="0" SourceStateName="H2SelfEvaluation" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2SelfEvaluation" SourceConnectionIndex="1" TargetStateName="H2AppraiserEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="202" Y="1316" />
+				<ns0:Point X="242" Y="1316" />
+				<ns0:Point X="242" Y="1354" />
+				<ns0:Point X="163" Y="1354" />
+				<ns0:Point X="163" Y="1361" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2ReviewerVerification" SetStateName="setStateH2ReviewerVerification" SourceActivity="H2AppraiserEvaluation" TargetConnectionIndex="0" SourceStateName="H2AppraiserEvaluation" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2AppraiserVerification" SourceConnectionIndex="1" TargetStateName="H2ReviewerVerification">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="235" Y="1426" />
+				<ns0:Point X="275" Y="1426" />
+				<ns0:Point X="275" Y="1466" />
+				<ns0:Point X="162" Y="1466" />
+				<ns0:Point X="162" Y="1471" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2AppraiseeSignOffOrAppeal" SetStateName="setStateToH2AppraiseeSignOffOrAppeal" SourceActivity="H2ReviewerVerification" TargetConnectionIndex="0" SourceStateName="H2ReviewerVerification" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2ReviewerVerification" SourceConnectionIndex="1" TargetStateName="H2AppraiseeSignOffOrAppeal">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="233" Y="1536" />
+				<ns0:Point X="273" Y="1536" />
+				<ns0:Point X="273" Y="1570" />
+				<ns0:Point X="154" Y="1570" />
+				<ns0:Point X="154" Y="1581" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2AppraiserEvaluation" SetStateName="setStateToH2AppraiserEvaluation" SourceActivity="H2AppraiseeSignOffOrAppeal" TargetConnectionIndex="0" SourceStateName="H2AppraiseeSignOffOrAppeal" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2AppraiseeSignOff" SourceConnectionIndex="1" TargetStateName="H2AppraiserEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="218" Y="1646" />
+				<ns0:Point X="274" Y="1646" />
+				<ns0:Point X="274" Y="1354" />
+				<ns0:Point X="163" Y="1354" />
+				<ns0:Point X="163" Y="1361" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2HR" SetStateName="setStateH2HR" SourceActivity="H2AppraiseeSignOffOrAppeal" TargetConnectionIndex="0" SourceStateName="H2AppraiseeSignOffOrAppeal" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2AppraiseeSignOff" SourceConnectionIndex="1" TargetStateName="H2HR">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="218" Y="1646" />
+				<ns0:Point X="258" Y="1646" />
+				<ns0:Point X="258" Y="1682" />
+				<ns0:Point X="142" Y="1682" />
+				<ns0:Point X="142" Y="1691" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="ClosedState" SetStateName="setStateToClosedState" SourceActivity="H2HR" TargetConnectionIndex="0" SourceStateName="H2HR" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2HR" SourceConnectionIndex="1" TargetStateName="ClosedState">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="147" Y="1756" />
+				<ns0:Point X="307" Y="1756" />
+				<ns0:Point X="307" Y="708" />
+				<ns0:Point X="142" Y="708" />
+				<ns0:Point X="142" Y="715" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2AppraiserEvaluation" SetStateName="setStateToH2AppraiserRevaluationHR" SourceActivity="H2HR" TargetConnectionIndex="0" SourceStateName="H2HR" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2HR" SourceConnectionIndex="1" TargetStateName="H2AppraiserEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="147" Y="1756" />
+				<ns0:Point X="235" Y="1756" />
+				<ns0:Point X="235" Y="1796" />
+				<ns0:Point X="51" Y="1796" />
+				<ns0:Point X="51" Y="1356" />
+				<ns0:Point X="163" Y="1356" />
+				<ns0:Point X="163" Y="1361" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H1Deactivation" SetStateName="setStateActivity8" SourceActivity="H1EmptyState" TargetConnectionIndex="0" SourceStateName="H1EmptyState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH1Empty" SourceConnectionIndex="1" TargetStateName="H1Deactivation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="164" Y="1866" />
+				<ns0:Point X="228" Y="1866" />
+				<ns0:Point X="228" Y="2010" />
+				<ns0:Point X="142" Y="2010" />
+				<ns0:Point X="142" Y="2021" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="SelfEvaluation" SetStateName="setStateActivity1" SourceActivity="H1EmptyState" TargetConnectionIndex="0" SourceStateName="H1EmptyState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH1Empty" SourceConnectionIndex="1" TargetStateName="SelfEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="164" Y="1866" />
+				<ns0:Point X="308" Y="1866" />
+				<ns0:Point X="308" Y="266" />
+				<ns0:Point X="142" Y="266" />
+				<ns0:Point X="142" Y="275" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiserGoalVerification" SetStateName="setStateActivity2" SourceActivity="H1EmptyState" TargetConnectionIndex="0" SourceStateName="H1EmptyState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH1Empty" SourceConnectionIndex="1" TargetStateName="AppraiserGoalVerification">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="164" Y="1866" />
+				<ns0:Point X="308" Y="1866" />
+				<ns0:Point X="308" Y="154" />
+				<ns0:Point X="172" Y="154" />
+				<ns0:Point X="172" Y="165" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2SelfEvaluation" SetStateName="setStateActivity3" SourceActivity="H2EmptyState" TargetConnectionIndex="0" SourceStateName="H2EmptyState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2Empty" SourceConnectionIndex="1" TargetStateName="H2SelfEvaluation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="164" Y="1976" />
+				<ns0:Point X="228" Y="1976" />
+				<ns0:Point X="228" Y="2016" />
+				<ns0:Point X="52" Y="2016" />
+				<ns0:Point X="52" Y="1242" />
+				<ns0:Point X="147" Y="1242" />
+				<ns0:Point X="147" Y="1251" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="AppraiserH2GoalVerification" SetStateName="setStateActivity4" SourceActivity="H2EmptyState" TargetConnectionIndex="0" SourceStateName="H2EmptyState" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH2Empty" SourceConnectionIndex="1" TargetStateName="AppraiserH2GoalVerification">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="164" Y="1976" />
+				<ns0:Point X="308" Y="1976" />
+				<ns0:Point X="308" Y="1136" />
+				<ns0:Point X="179" Y="1136" />
+				<ns0:Point X="179" Y="1141" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="H2InitialGoalSetting" SetStateName="setStateToH2Start" SourceActivity="H1Deactivation" TargetConnectionIndex="0" SourceStateName="H1Deactivation" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="edH1Deactivation" SourceConnectionIndex="1" TargetStateName="H2InitialGoalSetting">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="194" Y="2086" />
+				<ns0:Point X="306" Y="2086" />
+				<ns0:Point X="306" Y="1026" />
+				<ns0:Point X="166" Y="1026" />
+				<ns0:Point X="166" Y="1031" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+</StateMachineWorkflowDesigner>

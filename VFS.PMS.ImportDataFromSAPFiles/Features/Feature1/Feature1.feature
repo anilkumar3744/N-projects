@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feature deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" title="VFS.PMS.ImportDataFromSAPFiles Feature1" dslVersion="1.0.0.0" Id="5d3a9f9a-ec24-43fd-8bb5-4ea34023151e" featureId="5d3a9f9a-ec24-43fd-8bb5-4ea34023151e" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel">
+</feature>

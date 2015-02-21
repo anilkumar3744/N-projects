@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Feature for VFS.PMS.ImportDataFromSAPFiles" Id="bd08970b-6e3e-42f6-a21e-317231a30d57" ReceiverAssembly="VFS.PMS.ImportDataFromSAPFiles, Version=1.0.0.0, Culture=neutral, PublicKeyToken=00bbaffd9028d1fd" ReceiverClass="VFS.PMS.ImportDataFromSAPFiles.Features.VFS.PMS.ImportDataFromSAPFilesFeature.VFSPMSEventReceiver" Scope="Web" Title="Feature for VFS.PMS.ImportDataFromSAPFiles"></Feature>

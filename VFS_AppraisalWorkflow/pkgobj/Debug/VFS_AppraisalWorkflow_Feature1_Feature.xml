@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="63f85c20-5ce7-4a75-952b-e4804ee8e3a6" Scope="Site" Title="VFS_AppraisalWorkflow Feature1">
+  <ElementManifests>
+    <ElementManifest Location="VFS_AppraisalWorkflow\Elements.xml" />
+  </ElementManifests>
+</Feature>

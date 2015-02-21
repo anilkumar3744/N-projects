@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Feature for VFS.PMS.TaskReminderJob" Id="54cdc0f5-4044-48ef-b3a3-e5adb8c23aa4" ReceiverAssembly="VFS.PMS.TaskReminderJob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd830e99d295e188" ReceiverClass="VFS.PMS.TaskReminderJob.Features.VFS.PMS.TaskReminderJob_Feature.VFSPMSEventReceiver" Scope="Web" Title="VFS.PMS.TaskReminderJob Feature"></Feature>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="090f6dba-46a1-4e74-8e4b-4e80417e03ec" solutionId="090f6dba-46a1-4e74-8e4b-4e80417e03ec" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="VFS.PMS.EventReceiver">
+    <features>
+        <featureReference itemId="60b94f09-969a-4115-b107-713a393f586f" />
+    </features>
+</package>

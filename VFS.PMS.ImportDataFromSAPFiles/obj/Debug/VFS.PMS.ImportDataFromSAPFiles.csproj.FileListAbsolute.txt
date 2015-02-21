@@ -1,0 +1,9 @@
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\bin\Debug\VFS.PMS.ImportDataFromSAPFiles.dll
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\bin\Debug\VFS.PMS.ImportDataFromSAPFiles.pdb
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\obj\Debug\ResolveAssemblyReference.cache
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\obj\Debug\VFS.PMS.ImportDataFromSAPFiles.dll
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\obj\Debug\VFS.PMS.ImportDataFromSAPFiles.pdb
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\bin\Debug\Microsoft.Practices.SharePoint.Common.dll
+D:\sekhar\VFS.PMS.ImportDataFromSAPFiles\bin\Debug\Microsoft.Practices.SharePoint.Common.XmlSerializers.dll

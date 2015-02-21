@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>http://shptraining:12345/</SharePointSiteUrl>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BB1F664B-9266-4fd6-B973-E1E44974B511}">
+        <ProjectItemStore Id="{91ea5b52-2e63-47f5-82ca-06ecd2bb5fd0}">
+          <DisplayName>VFS_Appraisals</DisplayName>
+          <HistoryList>Workflow History</HistoryList>
+          <HistoryListGuid>{a4ccce74-df27-4e46-9530-70a1e67a717f}</HistoryListGuid>
+          <TaskList>VFSAppraisalTasks</TaskList>
+          <TaskListGuid>{a689714a-4b49-47f3-a8ee-d1e0db2497f5}</TaskListGuid>
+          <AutoAssociate>true</AutoAssociate>
+          <ManualStart>true</ManualStart>
+          <ListURL>http://shptraining:12345/Lists/Appraisals/AllItems.aspx</ListURL>
+          <TargetList>Appraisals</TargetList>
+          <TargetListGuid>{b4698dbc-b92f-45ec-a4ee-87148a1cc359}</TargetListGuid>
+          <StartOnCreate>false</StartOnCreate>
+          <StartOnChange>false</StartOnChange>
+        </ProjectItemStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

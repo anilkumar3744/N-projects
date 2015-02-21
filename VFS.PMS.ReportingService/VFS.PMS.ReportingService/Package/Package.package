@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7faf0cd2-1637-4bc7-b057-f481fe64ff4f" solutionId="7faf0cd2-1637-4bc7-b057-f481fe64ff4f" resetWebServer="false" name="VFS.PMS.ReportingService" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="b6c9b85d-6ad3-404f-8b06-6e8241ff04f1" />
+  </projectItems>
+</package>

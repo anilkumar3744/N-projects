@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="VFS.PMS.EventReceiver Feature" Id="60b94f09-969a-4115-b107-713a393f586f" Scope="Web" Title="VFS.PMS.EventReceiver Feature1">
+  <Properties>
+    <Property Key="GloballyAvailable" Value="true" />
+  </Properties>
+  <ElementManifests>
+    <ElementManifest Location="EmployeeDataReciever\Elements.xml" />
+    <ElementManifest Location="EventReceiverOnEmployeeAdded\Elements.xml" />
+    <ElementManifest Location="EventReceiverOnEmployeeUpdated\Elements.xml" />
+  </ElementManifests>
+</Feature>

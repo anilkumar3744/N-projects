@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="03ccfefc-d8d8-4797-9a2a-00fbbc63f3d4" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="VFS.PMS.TaskReminderJob.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="VFS.PMS.TaskReminderJob_VFS.PMS.TaskReminderJob Feature\Feature.xml" />
+  </FeatureManifests>
+</Solution>
